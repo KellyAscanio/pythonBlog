@@ -1,5 +1,11 @@
 # pythonBlog
 
+Kelly Johana Ascanio Rodriguex
+
+ADSO 2470980
+
+CBA Mosquera
+
 Pagina principal.
 ![image](https://user-images.githubusercontent.com/101758695/208254504-d186a23a-de39-4e5e-8d11-0b80abb6d807.png)
 
