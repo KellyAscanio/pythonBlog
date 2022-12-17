@@ -1,0 +1,42 @@
+<!--templates/basehtml-->
+{% load static%}
+<html>
+    <head>
+
+        <title>Django Blog</title>
+        <link rel="stylesheet" href= "{% static 'css/base.css'%}">
+        <link rel= "stylesheet" href=  "{% static 'bootstrap-5.2.2-dist/js/bootstrap.min.css'%}">
+        <link rel="shortcut icon" href="{% static 'img/user' %}">
+    </head>
+
+    <body id= "container">
+        <header>
+            {% if user.is_authenticated %}
+                <p>Hola {{ user.username }}!</p>
+                <p><a href="{% url 'logout' %}">Logout</a></p>
+            {% else %}
+                <div class="user">
+                <p>Usuario no ha iniciado sesión.</p>
+                </div>
+                <div style="text-align: center;">
+                    
+                     <a class="boton1" href= "{% url 'login' %}">Login</a>
+                     <a class="boton2" href= "{% url 'signup' %}">Sign Up</a>
+                    
+                </div>
+                
+            {% endif %}
+            <div style="text-align: center">
+                <h1><a id= "home" href= "{% url 'home'%}">Django Blog </a></h1>
+                <img src="{%static 'img/user'%}">
+
+            </div>
+        </header>
+        <div style="text-align: center;">
+            {% block content %}
+            {% endblock content%}
+        </div>
+        <script src= "{%static 'bootstrap-5.2.2-dist/js/bootstrap.min.js'%}"></script>
+
+</html>
+
